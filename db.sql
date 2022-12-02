@@ -164,7 +164,7 @@ CREATE TABLE `admin_user` (
 
 LOCK TABLES `admin_user` WRITE;
 /*!40000 ALTER TABLE `admin_user` DISABLE KEYS */;
-INSERT INTO `admin_user` VALUES (1,'Timur','Gafarov','timik2000@yahoo.com','admin','2b157f948e9f9850ee1e998452470fc770ae740500f1650764c3037159dcbf77:b55x9JcY3qSZjSEwBbCjAR7IHjWZYi3X:3_32_2_67108864','2022-11-28 06:29:38','2022-12-02 00:03:54','2022-12-02 00:03:54',14,0,1,'{\"configState\":{\"web_unsecure\":\"1\",\"web_secure\":\"1\",\"general_country\":\"0\",\"general_region\":\"0\",\"general_locale\":\"0\",\"general_store_information\":\"0\",\"general_single_store_mode\":\"0\"}}',NULL,NULL,'en_US',0,NULL,NULL);
+INSERT INTO `admin_user` VALUES (1,'Timur','Gafarov','timik2000@yahoo.com','admin','2b157f948e9f9850ee1e998452470fc770ae740500f1650764c3037159dcbf77:b55x9JcY3qSZjSEwBbCjAR7IHjWZYi3X:3_32_2_67108864','2022-11-28 06:29:38','2022-12-02 01:01:59','2022-12-02 01:01:59',15,0,1,'{\"configState\":{\"web_unsecure\":\"1\",\"web_secure\":\"1\",\"general_country\":\"0\",\"general_region\":\"0\",\"general_locale\":\"0\",\"general_store_information\":\"0\",\"general_single_store_mode\":\"0\"}}',NULL,NULL,'en_US',0,NULL,NULL);
 /*!40000 ALTER TABLE `admin_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -211,7 +211,7 @@ CREATE TABLE `admin_user_session` (
   KEY `ADMIN_USER_SESSION_SESSION_ID` (`session_id`),
   KEY `ADMIN_USER_SESSION_USER_ID` (`user_id`),
   CONSTRAINT `ADMIN_USER_SESSION_USER_ID_ADMIN_USER_USER_ID` FOREIGN KEY (`user_id`) REFERENCES `admin_user` (`user_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COMMENT='Admin User sessions table';
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COMMENT='Admin User sessions table';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -220,7 +220,7 @@ CREATE TABLE `admin_user_session` (
 
 LOCK TABLES `admin_user_session` WRITE;
 /*!40000 ALTER TABLE `admin_user_session` DISABLE KEYS */;
-INSERT INTO `admin_user_session` VALUES (1,NULL,1,1,'2022-11-28 06:29:54','2022-11-28 06:34:07','172.19.0.2'),(2,NULL,1,1,'2022-11-30 23:27:37','2022-12-01 00:08:06','172.19.0.2'),(3,NULL,1,1,'2022-12-01 00:24:08','2022-12-01 00:29:34','172.19.0.2'),(4,NULL,1,1,'2022-12-01 00:45:57','2022-12-01 00:52:06','172.19.0.2'),(5,NULL,1,1,'2022-12-01 01:11:17','2022-12-01 01:11:46','172.19.0.2'),(6,NULL,1,1,'2022-12-01 01:28:46','2022-12-01 01:33:41','172.19.0.2'),(7,NULL,1,1,'2022-12-01 02:22:14','2022-12-01 02:23:49','172.19.0.2'),(8,NULL,1,1,'2022-12-01 17:06:20','2022-12-01 17:20:39','172.19.0.3'),(9,NULL,1,1,'2022-12-01 17:41:32','2022-12-01 17:58:29','172.19.0.3'),(10,NULL,1,1,'2022-12-01 18:40:09','2022-12-01 18:40:09','172.19.0.3'),(11,NULL,1,1,'2022-12-01 18:59:16','2022-12-01 19:56:11','172.19.0.3'),(12,NULL,1,1,'2022-12-01 22:40:20','2022-12-01 22:53:13','172.19.0.3'),(13,NULL,1,1,'2022-12-01 23:19:48','2022-12-01 23:45:03','172.19.0.3'),(14,NULL,1,1,'2022-12-02 00:03:54','2022-12-02 00:38:32','172.19.0.3');
+INSERT INTO `admin_user_session` VALUES (1,NULL,1,1,'2022-11-28 06:29:54','2022-11-28 06:34:07','172.19.0.2'),(2,NULL,1,1,'2022-11-30 23:27:37','2022-12-01 00:08:06','172.19.0.2'),(3,NULL,1,1,'2022-12-01 00:24:08','2022-12-01 00:29:34','172.19.0.2'),(4,NULL,1,1,'2022-12-01 00:45:57','2022-12-01 00:52:06','172.19.0.2'),(5,NULL,1,1,'2022-12-01 01:11:17','2022-12-01 01:11:46','172.19.0.2'),(6,NULL,1,1,'2022-12-01 01:28:46','2022-12-01 01:33:41','172.19.0.2'),(7,NULL,1,1,'2022-12-01 02:22:14','2022-12-01 02:23:49','172.19.0.2'),(8,NULL,1,1,'2022-12-01 17:06:20','2022-12-01 17:20:39','172.19.0.3'),(9,NULL,1,1,'2022-12-01 17:41:32','2022-12-01 17:58:29','172.19.0.3'),(10,NULL,1,1,'2022-12-01 18:40:09','2022-12-01 18:40:09','172.19.0.3'),(11,NULL,1,1,'2022-12-01 18:59:16','2022-12-01 19:56:11','172.19.0.3'),(12,NULL,1,1,'2022-12-01 22:40:20','2022-12-01 22:53:13','172.19.0.3'),(13,NULL,1,1,'2022-12-01 23:19:48','2022-12-01 23:45:03','172.19.0.3'),(14,NULL,1,1,'2022-12-02 00:03:54','2022-12-02 00:38:32','172.19.0.3'),(15,NULL,1,1,'2022-12-02 01:01:59','2022-12-02 01:02:48','172.19.0.3');
 /*!40000 ALTER TABLE `admin_user_session` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -793,7 +793,6 @@ CREATE TABLE `catalog_category_product` (
 
 LOCK TABLES `catalog_category_product` WRITE;
 /*!40000 ALTER TABLE `catalog_category_product` DISABLE KEYS */;
-INSERT INTO `catalog_category_product` VALUES (59,3,68,0),(60,3,69,0),(61,3,70,0),(62,3,71,0),(63,3,72,0),(64,3,73,0);
 /*!40000 ALTER TABLE `catalog_category_product` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -881,7 +880,6 @@ CREATE TABLE `catalog_category_product_index_store1` (
 
 LOCK TABLES `catalog_category_product_index_store1` WRITE;
 /*!40000 ALTER TABLE `catalog_category_product_index_store1` DISABLE KEYS */;
-INSERT INTO `catalog_category_product_index_store1` VALUES (2,74,10000,0,1,4),(2,68,0,1,1,4),(2,69,0,1,1,4),(2,70,0,1,1,4),(2,71,0,1,1,4),(2,72,0,1,1,4),(2,73,0,1,1,4),(3,68,0,1,1,4),(3,69,0,1,1,4),(3,70,0,1,1,4),(3,71,0,1,1,4),(3,72,0,1,1,4),(3,73,0,1,1,4);
 /*!40000 ALTER TABLE `catalog_category_product_index_store1` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1261,7 +1259,6 @@ CREATE TABLE `catalog_product_entity` (
 
 LOCK TABLES `catalog_product_entity` WRITE;
 /*!40000 ALTER TABLE `catalog_product_entity` DISABLE KEYS */;
-INSERT INTO `catalog_product_entity` VALUES (68,9,'simple','436270',0,0,'2022-12-02 00:27:52','2022-12-02 00:27:52'),(69,9,'simple','1013860',0,0,'2022-12-02 00:27:56','2022-12-02 00:27:56'),(70,9,'simple','724495',0,0,'2022-12-02 00:30:06','2022-12-02 00:30:06'),(71,9,'simple','988233',0,0,'2022-12-02 00:31:56','2022-12-02 00:31:56'),(72,9,'simple','829799',0,0,'2022-12-02 00:33:11','2022-12-02 00:33:11'),(73,9,'simple','872177',0,0,'2022-12-02 00:36:19','2022-12-02 00:36:19'),(74,9,'simple','948276',0,0,'2022-12-02 00:40:20','2022-12-02 00:40:20');
 /*!40000 ALTER TABLE `catalog_product_entity` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1326,7 +1323,6 @@ CREATE TABLE `catalog_product_entity_decimal` (
 
 LOCK TABLES `catalog_product_entity_decimal` WRITE;
 /*!40000 ALTER TABLE `catalog_product_entity_decimal` DISABLE KEYS */;
-INSERT INTO `catalog_product_entity_decimal` VALUES (68,77,0,68,5.990000),(69,77,0,69,5.990000),(70,77,0,70,5.990000),(71,77,0,71,5.990000),(72,77,0,72,5.990000),(73,77,0,73,5.990000),(74,77,0,74,5.990000);
 /*!40000 ALTER TABLE `catalog_product_entity_decimal` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1394,7 +1390,6 @@ CREATE TABLE `catalog_product_entity_int` (
 
 LOCK TABLES `catalog_product_entity_int` WRITE;
 /*!40000 ALTER TABLE `catalog_product_entity_int` DISABLE KEYS */;
-INSERT INTO `catalog_product_entity_int` VALUES (261,97,0,68,1),(262,99,0,68,4),(263,115,0,68,1),(264,136,0,68,2),(265,97,0,69,1),(266,99,0,69,4),(267,115,0,69,1),(268,136,0,69,2),(269,97,0,70,1),(270,99,0,70,4),(271,115,0,70,1),(272,136,0,70,2),(273,97,0,71,1),(274,99,0,71,4),(275,115,0,71,1),(276,136,0,71,2),(277,97,0,72,1),(278,99,0,72,4),(279,115,0,72,1),(280,136,0,72,2),(281,97,0,73,1),(282,99,0,73,4),(283,115,0,73,1),(284,136,0,73,2),(285,97,0,74,1),(286,99,0,74,4),(287,115,0,74,1),(288,136,0,74,2);
 /*!40000 ALTER TABLE `catalog_product_entity_int` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1423,7 +1418,6 @@ CREATE TABLE `catalog_product_entity_media_gallery` (
 
 LOCK TABLES `catalog_product_entity_media_gallery` WRITE;
 /*!40000 ALTER TABLE `catalog_product_entity_media_gallery` DISABLE KEYS */;
-INSERT INTO `catalog_product_entity_media_gallery` VALUES (71,90,'/b/Q/bQXAqRx2Fgc46uCVWgoPz5L5Dtr_2_4.jpg','image',0),(72,90,'/p/S/pSOuqtJmdh7aI1yiK7M8e0PmbPC_1_4.jpg','image',0),(73,90,'/q/B/qBx97wytqlyPqXATHqRgIVFxJRU_1_4.jpg','image',0),(74,90,'/n/x/nxwV5wWUqQgV0A8IktIR6u0QAbv_1_4.jpg','image',0),(75,90,'/v/T/vTFLEVeoF84aI5fuESrLmHerTK4_1_4.jpg','image',0),(76,90,'/k/m/kmzppWh7ljL6K9fXW72bPN3gKwu_1.jpg','image',0),(77,90,'/9/P/9PWCgPy6B2qofD5R27L1CBsbgCG_1.jpg','image',0),(78,90,'/6/p/6pCJTCqzhKDeFcZJi7vOwxBbX2z_1.jpg','image',0),(79,90,'/7/z/7zQJYV02yehWrQN6NjKsBorqUUS_1.jpg','image',0),(80,90,'/g/k/gkseI3CUfQtMKX41XD4AxDzhQb7_1.jpg','image',0),(81,90,'/n/Z/nZvMQLmerYMdMa7mM56OuhjncAo_1.jpg','image',0),(82,90,'/d/T/dTQOU5a32K3UPTIXHgipEqN41OM_1.jpg','image',0),(83,90,'/r/d/rdDL4y7BxGyXFEDJgAG4lz89bG2_1.jpg','image',0),(84,90,'/9/0/90ZZIoWQLLEXSVm0ik3eEQBinul_1.jpg','image',0),(85,90,'/a/u/au4HUSWDRadIcl9CqySlw1kJMfo_1.jpg','image',0),(86,90,'/x/k/xkOax3HOpxhdz2hnMEBvSkWEmnM_1.jpg','image',0),(87,90,'/t/m/tm1kAqfiElwOgXLI8goHBqhIWIM_1.jpg','image',0),(88,90,'/u/I/uIf5OBGSKqC5SoDsXsxfFaG2mCR_1.jpg','image',0),(89,90,'/8/T/8Tr79lfoCkOYRg8SYwWit4OoQLi_1.jpg','image',0),(90,90,'/i/6/i6u0xPuFLAxdELBxUit75fyBqlq_1.jpg','image',0),(91,90,'/h/z/hzdI8PjmpetdMiNLzrJRUa6ceHw_1.jpg','image',0),(92,90,'/9/V/9VrAOHqsobNx8YACcuk8Bk8dv8a_1.jpg','image',0),(93,90,'/y/w/ywJEpcXeOO9CyL3semYsfdz9Uzg_1.jpg','image',0),(94,90,'/7/0/707thQazLJiYLBhCrZlRoV05NNL_1.jpg','image',0),(95,90,'/a/6/a64zCJnqOwHYdFHfdQFqQcxYSAz_1.jpg','image',0),(96,90,'/i/A/iAuFuV0W9QhfG7B6q1XSqo85j3w_1.jpg','image',0),(97,90,'/k/X/kXA8hpB0vumc8lE8RXKHafKfafB_1.jpg','image',0),(98,90,'/9/x/9xJKCkQVCNL2J8mofoU8kI37Dfb_1.jpg','image',0);
 /*!40000 ALTER TABLE `catalog_product_entity_media_gallery` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1459,7 +1453,6 @@ CREATE TABLE `catalog_product_entity_media_gallery_value` (
 
 LOCK TABLES `catalog_product_entity_media_gallery_value` WRITE;
 /*!40000 ALTER TABLE `catalog_product_entity_media_gallery_value` DISABLE KEYS */;
-INSERT INTO `catalog_product_entity_media_gallery_value` VALUES (71,1,68,NULL,1,0,145),(71,0,68,NULL,1,0,146),(72,1,68,NULL,2,0,147),(72,0,68,NULL,2,0,148),(73,1,68,NULL,3,0,149),(73,0,68,NULL,3,0,150),(74,1,68,NULL,4,0,151),(74,0,68,NULL,4,0,152),(75,1,68,NULL,5,0,153),(75,0,68,NULL,5,0,154),(76,1,69,NULL,1,0,155),(76,0,69,NULL,1,0,156),(77,1,69,NULL,2,0,157),(77,0,69,NULL,2,0,158),(78,1,69,NULL,3,0,159),(78,0,69,NULL,3,0,160),(79,1,70,NULL,1,0,161),(79,0,70,NULL,1,0,162),(80,1,70,NULL,2,0,163),(80,0,70,NULL,2,0,164),(81,1,70,NULL,3,0,165),(81,0,70,NULL,3,0,166),(82,1,70,NULL,4,0,167),(82,0,70,NULL,4,0,168),(83,1,70,NULL,5,0,169),(83,0,70,NULL,5,0,170),(84,1,71,NULL,1,0,171),(84,0,71,NULL,1,0,172),(85,1,72,NULL,1,0,173),(85,0,72,NULL,1,0,174),(86,1,72,NULL,2,0,175),(86,0,72,NULL,2,0,176),(87,1,72,NULL,3,0,177),(87,0,72,NULL,3,0,178),(88,1,72,NULL,4,0,179),(88,0,72,NULL,4,0,180),(89,1,73,NULL,1,0,181),(89,0,73,NULL,1,0,182),(90,1,73,NULL,2,0,183),(90,0,73,NULL,2,0,184),(91,1,73,NULL,3,0,185),(91,0,73,NULL,3,0,186),(92,1,73,NULL,4,0,187),(92,0,73,NULL,4,0,188),(93,1,73,NULL,5,0,189),(93,0,73,NULL,5,0,190),(94,1,74,NULL,1,0,191),(94,0,74,NULL,1,0,192),(95,1,74,NULL,2,0,193),(95,0,74,NULL,2,0,194),(96,1,74,NULL,3,0,195),(96,0,74,NULL,3,0,196),(97,1,74,NULL,4,0,197),(97,0,74,NULL,4,0,198),(98,1,74,NULL,5,0,199),(98,0,74,NULL,5,0,200);
 /*!40000 ALTER TABLE `catalog_product_entity_media_gallery_value` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1486,7 +1479,6 @@ CREATE TABLE `catalog_product_entity_media_gallery_value_to_entity` (
 
 LOCK TABLES `catalog_product_entity_media_gallery_value_to_entity` WRITE;
 /*!40000 ALTER TABLE `catalog_product_entity_media_gallery_value_to_entity` DISABLE KEYS */;
-INSERT INTO `catalog_product_entity_media_gallery_value_to_entity` VALUES (71,68),(72,68),(73,68),(74,68),(75,68),(76,69),(77,69),(78,69),(79,70),(80,70),(81,70),(82,70),(83,70),(84,71),(85,72),(86,72),(87,72),(88,72),(89,73),(90,73),(91,73),(92,73),(93,73),(94,74),(95,74),(96,74),(97,74),(98,74);
 /*!40000 ALTER TABLE `catalog_product_entity_media_gallery_value_to_entity` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1550,7 +1542,6 @@ CREATE TABLE `catalog_product_entity_text` (
 
 LOCK TABLES `catalog_product_entity_text` WRITE;
 /*!40000 ALTER TABLE `catalog_product_entity_text` DISABLE KEYS */;
-INSERT INTO `catalog_product_entity_text` VALUES (74,75,0,68,'Nearly 5,000 years after he was bestowed with the almighty powers of the Egyptian gods—and imprisoned just as quickly—Black Adam is freed from his earthly tomb, ready to unleash his unique form of justice on the modern world.'),(75,75,0,69,'When Sheriff Roy Pulsipher finds himself in the afterlife, he joins a special police force and returns to Earth to save humanity from the undead.'),(76,75,0,70,'The story of the Agojie, the all-female unit of warriors who protected the African Kingdom of Dahomey in the 1800s with skills and a fierceness unlike anything the world has ever seen, and General Nanisca as she trains the next generation of recruits and readies them for battle against an enemy determined to destroy their way of life.'),(77,75,0,71,'Following a mysterious disappearance on a jump, a group of skydivers experience paranormal occurrences that leave them fighting for their lives.'),(78,75,0,72,'Renegade bounty hunter Ryan Swan must carve his way through the Hawaiian crime world to wreak vengeance on the kingpin who murdered his father.'),(79,75,0,73,'Set in San Tiburon, the world\'s most dangerous maximum-security penitentiary and home to the world\'s most treacherous superpowered criminals, where tensions among the inmates and staff heighten, leading to anarchy that engulfs the prison and order is turned upside down.'),(80,75,0,74,'Having cleared his name, genius mechanic Lino has only one goal in mind: getting revenge on the corrupt cops who killed his brother and his mentor.');
 /*!40000 ALTER TABLE `catalog_product_entity_text` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1618,7 +1609,6 @@ CREATE TABLE `catalog_product_entity_varchar` (
 
 LOCK TABLES `catalog_product_entity_varchar` WRITE;
 /*!40000 ALTER TABLE `catalog_product_entity_varchar` DISABLE KEYS */;
-INSERT INTO `catalog_product_entity_varchar` VALUES (660,73,0,68,'Black Adam'),(661,87,0,68,'/v/T/vTFLEVeoF84aI5fuESrLmHerTK4_1_4.jpg'),(662,88,0,68,'/v/T/vTFLEVeoF84aI5fuESrLmHerTK4_1_4.jpg'),(663,89,0,68,'/v/T/vTFLEVeoF84aI5fuESrLmHerTK4_1_4.jpg'),(664,106,0,68,'container2'),(665,121,0,68,'black-adam'),(666,124,0,68,'0'),(667,137,0,68,'Action, Fantasy, Science Fiction'),(668,139,0,68,'7.3'),(669,142,0,68,'Beau Flynn, Dwayne Johnson, Dany Garcia, Hiram Garcia'),(670,144,0,68,'Jaume Collet-Serra'),(671,145,0,68,'2022'),(672,146,0,68,'Dwayne Johnson, Aldis Hodge, Noah Centineo, Sarah Shahi, Quintessa Swindell, Marwan Kenzari, Mo Amer, Bodhi Sabongui, Pierce Brosnan, James Cusati-Moyer, Jalon Christian, Benjamin Patterson, Odelya Halevi, Uli Latukefu, Jennifer Holland, Henry Winkler, Ch'),(676,73,0,69,'R.I.P.D. 2: Rise of the Damned'),(677,87,0,69,'/6/p/6pCJTCqzhKDeFcZJi7vOwxBbX2z_1.jpg'),(678,88,0,69,'/6/p/6pCJTCqzhKDeFcZJi7vOwxBbX2z_1.jpg'),(679,89,0,69,'/6/p/6pCJTCqzhKDeFcZJi7vOwxBbX2z_1.jpg'),(680,106,0,69,'container2'),(681,121,0,69,'r-i-p-d-2-rise-of-the-damned'),(682,124,0,69,'0'),(683,137,0,69,'Fantasy, Action, Comedy, Crime'),(684,139,0,69,'6.768'),(685,142,0,69,'Ogden Gavanski'),(686,144,0,69,'Paul Leyden'),(687,145,0,69,'2022'),(688,146,0,69,'Jeffrey Donovan, Penelope Mitchell, Richard Brake, Kerry Knuppe, Jake Choi, Richard Fleeshman, Craige Els, Tilly Keeper, Nóra Trokán, Stephanie Levi-John, Nicholas Wittman'),(692,73,0,70,'The Woman King'),(693,87,0,70,'/r/d/rdDL4y7BxGyXFEDJgAG4lz89bG2_1.jpg'),(694,88,0,70,'/r/d/rdDL4y7BxGyXFEDJgAG4lz89bG2_1.jpg'),(695,89,0,70,'/r/d/rdDL4y7BxGyXFEDJgAG4lz89bG2_1.jpg'),(696,106,0,70,'container2'),(697,121,0,70,'the-woman-king'),(698,124,0,70,'0'),(699,137,0,70,'Action, Drama, History'),(700,139,0,70,'7.893'),(701,142,0,70,'Maria Bello, Cathy Schulman, Viola Davis, Julius Tennon'),(702,144,0,70,'Gina Prince-Bythewood'),(703,145,0,70,'2022'),(704,146,0,70,'Viola Davis, Thuso Mbedu, Lashana Lynch, John Boyega, Sheila Atim, Jordan Bolger, Hero Fiennes Tiffin, Jayme Lawson, Adrienne Warren, Angélique Kidjo, Masali Baduza, Jimmy Odukoya, Thando Dlomo, Tuks Tad Lungu, Makgotso M, Chioma Antoinette Umeala, Shaina'),(708,73,0,71,'Hex'),(709,87,0,71,'/9/0/90ZZIoWQLLEXSVm0ik3eEQBinul_1.jpg'),(710,88,0,71,'/9/0/90ZZIoWQLLEXSVm0ik3eEQBinul_1.jpg'),(711,89,0,71,'/9/0/90ZZIoWQLLEXSVm0ik3eEQBinul_1.jpg'),(712,106,0,71,'container2'),(713,121,0,71,'hex'),(714,124,0,71,'0'),(715,137,0,71,'Action, Horror, Thriller'),(716,139,0,71,'4.333'),(717,144,0,71,'Chris Johnston, Andy Malchiodi'),(718,145,0,71,'2022'),(719,146,0,71,'Kayla Adams, Matthew Holcomb, Bryan David Roberts, Chloe Berman, Brad Worch II, Eric Alperin, Cody Renee Cameron'),(723,73,0,72,'Paradise City'),(724,87,0,72,'/u/I/uIf5OBGSKqC5SoDsXsxfFaG2mCR_1.jpg'),(725,88,0,72,'/u/I/uIf5OBGSKqC5SoDsXsxfFaG2mCR_1.jpg'),(726,89,0,72,'/u/I/uIf5OBGSKqC5SoDsXsxfFaG2mCR_1.jpg'),(727,106,0,72,'container2'),(728,121,0,72,'paradise-city'),(729,124,0,72,'0'),(730,137,0,72,'Crime, Action, Thriller'),(731,139,0,72,'6.161'),(732,142,0,72,'Corey Large, Brian O\'Shea'),(733,144,0,72,'Chuck Russell'),(734,145,0,72,'2022'),(735,146,0,72,'John Travolta, Bruce Willis, Blake Jenner, Praya Lundberg, Stephen Dorff, Corey Large, Branscombe Richmond, Lorenzo Antonucci, Kate Katzman, Amber Abara'),(739,73,0,73,'Corrective Measures'),(740,87,0,73,'/y/w/ywJEpcXeOO9CyL3semYsfdz9Uzg_1.jpg'),(741,88,0,73,'/y/w/ywJEpcXeOO9CyL3semYsfdz9Uzg_1.jpg'),(742,89,0,73,'/y/w/ywJEpcXeOO9CyL3semYsfdz9Uzg_1.jpg'),(743,106,0,73,'container2'),(744,121,0,73,'corrective-measures'),(745,124,0,73,'0'),(746,137,0,73,'Science Fiction, Action'),(747,139,0,73,'5.031'),(748,144,0,73,'Sean Patrick O\'Reilly'),(749,145,0,73,'2022'),(750,146,0,73,'Bruce Willis, Hayley Sales, Michael Rooker, Kat Ruston, Matthew Kevin Anderson, Doug Bradley, Tom Cavanagh, Dan Payne, Brennan Mejia, Daniel Cudmore, Kevin Zegers, Malcolm Sparrow-Crawford, Celia Aloma, Chase James'),(754,73,0,74,'Lost Bullet 2'),(755,87,0,74,'/9/x/9xJKCkQVCNL2J8mofoU8kI37Dfb_1.jpg'),(756,88,0,74,'/9/x/9xJKCkQVCNL2J8mofoU8kI37Dfb_1.jpg'),(757,89,0,74,'/9/x/9xJKCkQVCNL2J8mofoU8kI37Dfb_1.jpg'),(758,106,0,74,'container2'),(759,121,0,74,'lost-bullet-2'),(760,124,0,74,'0'),(761,137,0,74,'Action, Drama, Thriller'),(762,139,0,74,'6.8'),(763,142,0,74,'Rémi Leautier'),(764,144,0,74,'Guillaume Pierret'),(765,145,0,74,'2022'),(766,146,0,74,'Alban Lenoir, Stéfi Celma, Pascale Arbillot, Sébastien Lalanne, Diego Martín, Jérôme Niel, Anne Serra, Quentin D\'Hainaut, Thibaut Évrard, Nicolas Duvauchelle');
 /*!40000 ALTER TABLE `catalog_product_entity_varchar` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1918,7 +1908,6 @@ CREATE TABLE `catalog_product_index_price` (
 
 LOCK TABLES `catalog_product_index_price` WRITE;
 /*!40000 ALTER TABLE `catalog_product_index_price` DISABLE KEYS */;
-INSERT INTO `catalog_product_index_price` VALUES (68,0,1,2,5.990000,5.990000,5.990000,5.990000,NULL),(68,1,1,2,5.990000,5.990000,5.990000,5.990000,NULL),(68,2,1,2,5.990000,5.990000,5.990000,5.990000,NULL),(68,3,1,2,5.990000,5.990000,5.990000,5.990000,NULL),(69,0,1,2,5.990000,5.990000,5.990000,5.990000,NULL),(69,1,1,2,5.990000,5.990000,5.990000,5.990000,NULL),(69,2,1,2,5.990000,5.990000,5.990000,5.990000,NULL),(69,3,1,2,5.990000,5.990000,5.990000,5.990000,NULL),(70,0,1,2,5.990000,5.990000,5.990000,5.990000,NULL),(70,1,1,2,5.990000,5.990000,5.990000,5.990000,NULL),(70,2,1,2,5.990000,5.990000,5.990000,5.990000,NULL),(70,3,1,2,5.990000,5.990000,5.990000,5.990000,NULL),(71,0,1,2,5.990000,5.990000,5.990000,5.990000,NULL),(71,1,1,2,5.990000,5.990000,5.990000,5.990000,NULL),(71,2,1,2,5.990000,5.990000,5.990000,5.990000,NULL),(71,3,1,2,5.990000,5.990000,5.990000,5.990000,NULL),(72,0,1,2,5.990000,5.990000,5.990000,5.990000,NULL),(72,1,1,2,5.990000,5.990000,5.990000,5.990000,NULL),(72,2,1,2,5.990000,5.990000,5.990000,5.990000,NULL),(72,3,1,2,5.990000,5.990000,5.990000,5.990000,NULL),(73,0,1,2,5.990000,5.990000,5.990000,5.990000,NULL),(73,1,1,2,5.990000,5.990000,5.990000,5.990000,NULL),(73,2,1,2,5.990000,5.990000,5.990000,5.990000,NULL),(73,3,1,2,5.990000,5.990000,5.990000,5.990000,NULL),(74,0,1,2,5.990000,5.990000,5.990000,5.990000,NULL),(74,1,1,2,5.990000,5.990000,5.990000,5.990000,NULL),(74,2,1,2,5.990000,5.990000,5.990000,5.990000,NULL),(74,3,1,2,5.990000,5.990000,5.990000,5.990000,NULL);
 /*!40000 ALTER TABLE `catalog_product_index_price` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3080,7 +3069,6 @@ CREATE TABLE `catalog_product_website` (
 
 LOCK TABLES `catalog_product_website` WRITE;
 /*!40000 ALTER TABLE `catalog_product_website` DISABLE KEYS */;
-INSERT INTO `catalog_product_website` VALUES (68,1),(69,1),(70,1),(71,1),(72,1),(73,1),(74,1);
 /*!40000 ALTER TABLE `catalog_product_website` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3110,7 +3098,6 @@ CREATE TABLE `catalog_url_rewrite_product_category` (
 
 LOCK TABLES `catalog_url_rewrite_product_category` WRITE;
 /*!40000 ALTER TABLE `catalog_url_rewrite_product_category` DISABLE KEYS */;
-INSERT INTO `catalog_url_rewrite_product_category` VALUES (182,3,68),(185,3,69),(188,3,70),(191,3,71),(194,3,72),(197,3,73);
 /*!40000 ALTER TABLE `catalog_url_rewrite_product_category` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3190,7 +3177,6 @@ CREATE TABLE `cataloginventory_stock_item` (
 
 LOCK TABLES `cataloginventory_stock_item` WRITE;
 /*!40000 ALTER TABLE `cataloginventory_stock_item` DISABLE KEYS */;
-INSERT INTO `cataloginventory_stock_item` VALUES (68,68,1,100.0000,0.0000,1,0,0,1,1.0000,1,0.0000,1,1,NULL,NULL,1,0,1,0,1,0.0000,1,0,0,0),(69,69,1,100.0000,0.0000,1,0,0,1,1.0000,1,0.0000,1,1,NULL,NULL,1,0,1,0,1,0.0000,1,0,0,0),(70,70,1,100.0000,0.0000,1,0,0,1,1.0000,1,0.0000,1,1,NULL,NULL,1,0,1,0,1,0.0000,1,0,0,0),(71,71,1,100.0000,0.0000,1,0,0,1,1.0000,1,0.0000,1,1,NULL,NULL,1,0,1,0,1,0.0000,1,0,0,0),(72,72,1,100.0000,0.0000,1,0,0,1,1.0000,1,0.0000,1,1,NULL,NULL,1,0,1,0,1,0.0000,1,0,0,0),(73,73,1,100.0000,0.0000,1,0,0,1,1.0000,1,0.0000,1,1,NULL,NULL,1,0,1,0,1,0.0000,1,0,0,0),(74,74,1,100.0000,0.0000,1,0,0,1,1.0000,1,0.0000,1,1,NULL,NULL,1,0,1,0,1,0.0000,1,0,0,0);
 /*!40000 ALTER TABLE `cataloginventory_stock_item` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -11621,7 +11607,7 @@ CREATE TABLE `url_rewrite` (
 
 LOCK TABLES `url_rewrite` WRITE;
 /*!40000 ALTER TABLE `url_rewrite` DISABLE KEYS */;
-INSERT INTO `url_rewrite` VALUES (1,'cms-page',1,'no-route','cms/page/view/page_id/1',0,1,NULL,1,NULL),(2,'cms-page',2,'home','cms/page/view/page_id/2',0,1,NULL,1,NULL),(3,'cms-page',3,'enable-cookies','cms/page/view/page_id/3',0,1,NULL,1,NULL),(4,'cms-page',4,'privacy-policy-cookie-restriction-mode','cms/page/view/page_id/4',0,1,NULL,1,NULL),(5,'category',3,'movies.html','catalog/category/view/id/3',0,1,NULL,1,NULL),(181,'product',68,'black-adam.html','catalog/product/view/id/68',0,1,NULL,1,NULL),(182,'product',68,'movies/black-adam.html','catalog/product/view/id/68/category/3',0,1,NULL,1,'{\"category_id\":\"3\"}'),(184,'product',69,'r-i-p-d-2-rise-of-the-damned.html','catalog/product/view/id/69',0,1,NULL,1,NULL),(185,'product',69,'movies/r-i-p-d-2-rise-of-the-damned.html','catalog/product/view/id/69/category/3',0,1,NULL,1,'{\"category_id\":\"3\"}'),(187,'product',70,'the-woman-king.html','catalog/product/view/id/70',0,1,NULL,1,NULL),(188,'product',70,'movies/the-woman-king.html','catalog/product/view/id/70/category/3',0,1,NULL,1,'{\"category_id\":\"3\"}'),(190,'product',71,'hex.html','catalog/product/view/id/71',0,1,NULL,1,NULL),(191,'product',71,'movies/hex.html','catalog/product/view/id/71/category/3',0,1,NULL,1,'{\"category_id\":\"3\"}'),(193,'product',72,'paradise-city.html','catalog/product/view/id/72',0,1,NULL,1,NULL),(194,'product',72,'movies/paradise-city.html','catalog/product/view/id/72/category/3',0,1,NULL,1,'{\"category_id\":\"3\"}'),(196,'product',73,'corrective-measures.html','catalog/product/view/id/73',0,1,NULL,1,NULL),(197,'product',73,'movies/corrective-measures.html','catalog/product/view/id/73/category/3',0,1,NULL,1,'{\"category_id\":\"3\"}'),(198,'product',74,'lost-bullet-2.html','catalog/product/view/id/74',0,1,NULL,1,NULL);
+INSERT INTO `url_rewrite` VALUES (1,'cms-page',1,'no-route','cms/page/view/page_id/1',0,1,NULL,1,NULL),(2,'cms-page',2,'home','cms/page/view/page_id/2',0,1,NULL,1,NULL),(3,'cms-page',3,'enable-cookies','cms/page/view/page_id/3',0,1,NULL,1,NULL),(4,'cms-page',4,'privacy-policy-cookie-restriction-mode','cms/page/view/page_id/4',0,1,NULL,1,NULL),(5,'category',3,'movies.html','catalog/category/view/id/3',0,1,NULL,1,NULL);
 /*!40000 ALTER TABLE `url_rewrite` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -12009,4 +11995,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-12-02  0:51:09
+-- Dump completed on 2022-12-02  1:03:55
