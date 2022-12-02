@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="product.info.main">
+            <block class="Magento\Catalog\Block\Product\View" name="product.attribute.genre" template="Magento_Catalog::product/view/attribute.phtml">
+                <arguments>
+                    <argument name="at_call" xsi:type="string">getGenre</argument>
+                    <argument name="at_code" xsi:type="string">genre</argument>
+                    <argument name="at_label" xsi:type="string">Genre</argument>
+                    <argument name="css_class" xsi:type="string">genre attribute-separator</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Catalog\Block\Product\View" name="product.attribute.actors" template="Magento_Catalog::product/view/attribute.phtml">
+                <arguments>
+                    <argument name="at_call" xsi:type="string">getActors</argument>
+                    <argument name="at_code" xsi:type="string">actors</argument>
+                    <argument name="at_label" xsi:type="string">Cast</argument>
+                    <argument name="css_class" xsi:type="string">cast attribute-separator</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Catalog\Block\Product\View" name="product.attribute.producer" template="Magento_Catalog::product/view/attribute.phtml">
+                <arguments>
+                    <argument name="at_call" xsi:type="string">getProducer</argument>
+                    <argument name="at_code" xsi:type="string">producer</argument>
+                    <argument name="at_label" xsi:type="string">Producer (s)</argument>
+                    <argument name="css_class" xsi:type="string">producers attribute-separator</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Catalog\Block\Product\View" name="product.attribute.vote_average" template="Magento_Catalog::product/view/attribute.phtml">
+                <arguments>
+                    <argument name="at_call" xsi:type="string">getVoteAverage</argument>
+                    <argument name="at_code" xsi:type="string">vote_average</argument>
+                    <argument name="at_label" xsi:type="string">Vote Average</argument>
+                    <argument name="css_class" xsi:type="string">vote_average attribute-separator</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Catalog\Block\Product\View" name="product.attribute.director" template="Magento_Catalog::product/view/attribute.phtml">
+                <arguments>
+                    <argument name="at_call" xsi:type="string">getDirector</argument>
+                    <argument name="at_code" xsi:type="string">director</argument>
+                    <argument name="at_label" xsi:type="string">Director (s)</argument>
+                    <argument name="css_class" xsi:type="string">director attribute-separator</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Catalog\Block\Product\View" name="product.attribute.release_date" template="Magento_Catalog::product/view/attribute.phtml">
+                <arguments>
+                    <argument name="at_call" xsi:type="string">getReleaseDate</argument>
+                    <argument name="at_code" xsi:type="string">release_date</argument>
+                    <argument name="at_label" xsi:type="string">Release Date</argument>
+                    <argument name="css_class" xsi:type="string">release_date attribute-separator</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
